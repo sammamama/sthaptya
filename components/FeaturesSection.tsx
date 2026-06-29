@@ -160,7 +160,7 @@ export default function FeaturesSection() {
 
           {/* CTA */}
           <div className="relative overflow-hidden rounded-2xl flex-1">
-            <div className="relative h-full px-6 py-10 flex flex-col items-center justify-center text-center">
+            <div className="relative h-full px-4 py-6 flex flex-col items-center justify-center text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-red-900/55 to-black/55" />
               <div
                 className="pointer-events-none absolute inset-0 opacity-[0.2]"
@@ -169,10 +169,10 @@ export default function FeaturesSection() {
                   backgroundSize: "200px 200px",
                 }}
               />
-              <h3 className="relative font-sans text-2xl font-bold text-white mb-3">
+              <h3 className="relative font-sans text-2xl font-bold text-white mb-2">
                 Work with us
               </h3>
-              <p className="relative font-display text-white/70 text-sm mb-6">
+              <p className="relative font-display text-white/70 text-sm mb-4">
                 Let&apos;s bring your vision to life.
               </p>
               <MagneticButton

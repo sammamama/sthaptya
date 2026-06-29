@@ -35,7 +35,9 @@ export default function ProjectCarousel({
 
   const scrollBy = (dir: number) => {
     if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: dir * 420, behavior: "smooth" });
+    const card = scrollRef.current.querySelector("li");
+    const cardWidth = card ? card.offsetWidth + 20 : 420;
+    scrollRef.current.scrollBy({ left: dir * cardWidth, behavior: "smooth" });
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
@@ -44,7 +46,6 @@ export default function ProjectCarousel({
     didDrag.current = false;
     setStartX(e.clientX);
     setScrollLeft(scrollRef.current.scrollLeft);
-    scrollRef.current.setPointerCapture(e.pointerId);
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
@@ -94,7 +95,7 @@ export default function ProjectCarousel({
         ref={scrollRef}
         role="group"
         aria-roledescription="carousel"
-        className="flex gap-5 list-none p-0 m-0 overflow-x-auto pb-4 cursor-grab active:cursor-grabbing scroll-smooth snap-x snap-mandatory"
+        className="flex gap-5 list-none p-0 m-0 overflow-x-auto pb-4 cursor-grab active:cursor-grabbing snap-x snap-mandatory"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -109,12 +110,12 @@ export default function ProjectCarousel({
           <li
             key={project.id}
             data-pc-card={project.id}
-            className="group flex-shrink-0 snap-start w-[280px] sm:w-[340px] lg:w-[400px]"
+            className="group flex-shrink-0 snap-center w-[300px] sm:w-[420px] lg:w-[500px]"
             aria-posinset={i + 1}
             aria-setsize={projects.length}
           >
-            <a href="/projects" onClick={(e) => handleClick(e, project.id)} className="block">
-              <div className="relative overflow-hidden rounded-xl h-[210px] sm:h-[255px] lg:h-[300px]">
+            <a href={`/projects/${project.categorySlug}/${project.slug}`} onClick={(e) => handleClick(e, project.id)} className="block">
+              <div className="relative overflow-hidden rounded-xl aspect-[4/3]">
                 <img
                   draggable={false}
                   src={project.image}

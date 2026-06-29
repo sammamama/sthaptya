@@ -38,8 +38,6 @@ export default async function ProjectPage({
 
   if (!project) notFound();
 
-  const heroImages = project.images.slice(0, 5);
-
   return (
     <>
       <Navbar variant="light" />
@@ -72,30 +70,9 @@ export default async function ProjectPage({
           </p>
         </div>
 
-        {/* Airbnb-style image grid */}
+        {/* Image grid — click any image to expand */}
         <div className="px-6 lg:px-16 mb-10">
-          <div className="relative grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-2 rounded-2xl overflow-hidden max-h-[70vh]">
-            {/* Hero image — large left */}
-            <div className="md:col-span-2 md:row-span-2">
-              <img
-                src={heroImages[0]}
-                alt={project.title}
-                className="h-full w-full object-cover cursor-pointer hover:brightness-90 transition-all"
-              />
-            </div>
-            {/* 4 smaller images — right grid */}
-            {heroImages.slice(1, 5).map((src, i) => (
-              <div key={i}>
-                <img
-                  src={src}
-                  alt={`${project.title} — ${i + 2}`}
-                  className="h-full w-full object-cover cursor-pointer hover:brightness-90 transition-all"
-                />
-              </div>
-            ))}
-            {/* Show all photos button */}
-            <ProjectGallery images={project.images} title={project.title} />
-          </div>
+          <ProjectGallery images={project.images} title={project.title} />
         </div>
 
       </main>
