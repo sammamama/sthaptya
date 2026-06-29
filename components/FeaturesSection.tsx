@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
+import MagneticButton from "@/components/MagneticButton";
 
 const INTERIOR_VIDEO = "https://d8j0ntlcm91z4.cloudfront.net/user_2wz19UwQVw85l2M9dxCWfoUPw1S/hf_20260601_080328_7a0d3adb-a310-4261-8206-49bf25f40280.mp4";
 
@@ -47,74 +48,82 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   );
 }
 
+function AutoPlayVideo({ src, className, style }: { src: string; className?: string; style?: React.CSSProperties }) {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.play().catch(() => {});
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={ref}
+      src={src}
+      autoPlay
+      loop
+      muted
+      playsInline
+      disablePictureInPicture
+      className={className}
+      style={style}
+    />
+  );
+}
+
 export default function FeaturesSection() {
   const helpedRef = useRef<HTMLDivElement>(null);
-  // Triggers once the "Helped" block scrolls into view — on mobile that's
-  // right after the user crosses "What you get" (the two stack vertically).
   const helpedInView = useInView(helpedRef, { once: true, amount: 0.2 });
 
   return (
-    <section className="relative w-full py-20 px-10 md:px-8 lg:px-16 overflow-x-clip">
+    <section className="relative w-full py-20 px-3 sm:px-5 lg:px-8 overflow-x-clip">
       <div className="relative z-10 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-12">
         <div>
           <div className="rounded-2xl border border-black/10 bg-black/5 backdrop-blur-sm p-6 md:p-4">
-            <h2 className="font-sans text-3xl font-bold text-neutral-800 mb-4">
+            <h2 className="font-sans text-3xl font-bold text-neutral-100 mb-4">
               What you get
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-4">
-              <div className="relative rounded-xl border border-black/10 bg-black/5 h-48 overflow-hidden">
-                <video
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-4">
+              <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
                   src={INTERIOR_VIDEO}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
                   className="absolute inset-0 h-full w-full object-cover"
-                  style={{ width: 320, height: 192 }}
                 />
                 <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
                   Interior Design
                 </span>
               </div>
-              <div className="relative rounded-xl border border-black/10 bg-black/5 h-48 overflow-hidden">
-                <video
+              <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
                   src={MODELLING_VIDEO}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
                   className="absolute inset-0 h-full w-full object-cover"
-                  style={{ width: 320, height: 192 }}
                 />
                 <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
                   3D Modelling
                 </span>
               </div>
-              <div className="relative rounded-xl border border-black/10 bg-black/5 h-48 overflow-hidden">
-                <video
+              <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
                   src={CONSTRUCTION_VIDEO}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
                   className="absolute inset-0 h-full w-full object-cover"
-                  style={{ width: 320, height: 192 }}
                 />
                 <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
                   Construction
                 </span>
               </div>
-              <div className="relative md:col-span-3 rounded-xl border border-black/10 bg-black/5 h-48 overflow-hidden">
-                <video
+              <div className="relative sm:col-span-2 md:col-span-3 rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
                   src={PLANNING_VIDEO}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  disablePictureInPicture
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-black">
@@ -125,34 +134,57 @@ export default function FeaturesSection() {
           </div>
         </div>
 
-        <div ref={helpedRef}>
-          <div className="rounded-2xl border border-black/10 bg-maroon backdrop-blur-sm p-4 flex flex-col gap-4">
-            <h2 className="font-sans text-3xl font-bold text-white">
+        <div className="flex flex-col gap-6" ref={helpedRef}>
+          <div className="relative overflow-hidden rounded-2xl border border-black/10 backdrop-blur-sm p-4 flex flex-col gap-4">
+            <div className="absolute inset-0 bg-red-900/55" />
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.2]"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")`,
+                backgroundSize: "200px 200px",
+              }}
+            />
+            <h2 className="relative font-sans text-3xl font-bold text-white">
               Helped
             </h2>
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-black/10 bg-black/5 px-5 py-4 flex items-center justify-between"
+                className="relative rounded-xl border border-black/10 bg-black/5 px-5 py-4 flex items-center justify-between"
               >
                 <span className="font-display italic text-white/70">{stat.label}</span>
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
             ))}
           </div>
+
+          {/* CTA */}
+          <div className="relative overflow-hidden rounded-2xl flex-1">
+            <div className="relative h-full px-6 py-10 flex flex-col items-center justify-center text-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/55 to-black/55" />
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.2]"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E")`,
+                  backgroundSize: "200px 200px",
+                }}
+              />
+              <h3 className="relative font-sans text-2xl font-bold text-white mb-3">
+                Work with us
+              </h3>
+              <p className="relative font-display text-white/70 text-sm mb-6">
+                Let&apos;s bring your vision to life.
+              </p>
+              <MagneticButton
+                href="/book"
+                className="relative inline-flex items-center gap-2 rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-black hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)]"
+              >
+                Book a Meeting
+              </MagneticButton>
+            </div>
+          </div>
         </div>
       </div>
-
-      <motion.img
-        src="/helped.png"
-        alt=""
-        aria-hidden="true"
-        initial={{ y: "100%", opacity: 0 }}
-        animate={helpedInView ? { y: "0%", opacity: 1 } : { y: "100%", opacity: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute right-0 translate-y-[-85%] md:-translate-y-1/2 h-[130%] w-auto object-contain will-change-transform pointer-events-none z-0"
-        style={{ maskImage: "linear-gradient(to left, black 40%, transparent 100%)", WebkitMaskImage: "linear-gradient(to left, black 40%, transparent 100%)" }}
-      />
     </section>
   );
 }

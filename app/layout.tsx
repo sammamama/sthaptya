@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Josefin_Sans, Instrument_Serif, Barlow } from "next/font/google";
+import LenisProvider from "@/components/LenisProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,7 +45,7 @@ export default function RootLayout({
       className={`${inter.variable} ${josefinSans.variable} ${instrumentSerif.variable} ${barlow.variable} antialiased`}
     >
       <body className="min-h-dvh bg-black text-white overflow-x-clip">
-        {children}
+        <LenisProvider>{children}</LenisProvider>
       </body>
     </html>
   );

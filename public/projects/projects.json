@@ -6,8 +6,8 @@
     "category": "Hospitality",
     "categorySlug": "hospitality",
     "description": "A luxury destination resort nestled in the hills of Kandaghat, featuring contemporary architecture blended with traditional Himachali design elements.",
-    "image": "/projects/hospitality/destination/1.jpg",
-    "images": ["/projects/hospitality/destination/1.jpg","/projects/hospitality/destination/2.jpg","/projects/hospitality/destination/3.jpg","/projects/hospitality/destination/4.jpg","/projects/hospitality/destination/5.jpg","/projects/hospitality/destination/6.jpg"]
+    "image": "/projects/hospitality/destination/1.webp",
+    "images": ["/projects/hospitality/destination/1.webp","/projects/hospitality/destination/2.webp","/projects/hospitality/destination/3.webp","/projects/hospitality/destination/4.webp","/projects/hospitality/destination/5.webp","/projects/hospitality/destination/6.webp"]
   },
   {
     "id": 2,
@@ -16,8 +16,8 @@
     "category": "Hospitality",
     "categorySlug": "hospitality",
     "description": "The resort on the hilltop offers a 360-degree view. It accommodates 3 cottages, 40 deluxe rooms, a restaurant, banquet hall, conference hall, swimming pool, terrace, and lawn with an apple orchard.",
-    "image": "/projects/hospitality/de-exotica/1.jpg",
-    "images": ["/projects/hospitality/de-exotica/1.jpg","/projects/hospitality/de-exotica/2.jpg","/projects/hospitality/de-exotica/3.jpg","/projects/hospitality/de-exotica/4.jpg","/projects/hospitality/de-exotica/5.jpg"]
+    "image": "/projects/hospitality/de-exotica/1.webp",
+    "images": ["/projects/hospitality/de-exotica/1.webp","/projects/hospitality/de-exotica/2.webp","/projects/hospitality/de-exotica/3.webp","/projects/hospitality/de-exotica/4.webp","/projects/hospitality/de-exotica/5.webp"]
   },
   {
     "id": 3,
@@ -26,8 +26,8 @@
     "category": "Hospitality",
     "categorySlug": "hospitality",
     "description": "A resort spanning 10,400 sq.m emphasizing optimal use of natural terrain and unobstructed views from all rooms. Features two interconnected blocks with dining, spa, swimming pool, and recreational areas.",
-    "image": "/projects/hospitality/radisson/1.jpg",
-    "images": ["/projects/hospitality/radisson/1.jpg","/projects/hospitality/radisson/2.jpg","/projects/hospitality/radisson/3.jpg","/projects/hospitality/radisson/4.jpg","/projects/hospitality/radisson/5.jpg"]
+    "image": "/projects/hospitality/radisson/1.webp",
+    "images": ["/projects/hospitality/radisson/1.webp","/projects/hospitality/radisson/2.webp","/projects/hospitality/radisson/3.webp","/projects/hospitality/radisson/4.webp","/projects/hospitality/radisson/5.webp"]
   },
   {
     "id": 4,
@@ -36,8 +36,8 @@
     "category": "Institutional",
     "categorySlug": "institutional",
     "description": "Designed on a challenging terrain, the school complex has three building blocks and playground integrated with terrace. It consists of 40 classrooms, modern labs and an auditorium with 1500 seating capacity.",
-    "image": "/projects/institutional/sacred/1.jpg",
-    "images": ["/projects/institutional/sacred/1.jpg","/projects/institutional/sacred/2.jpg","/projects/institutional/sacred/3.jpg","/projects/institutional/sacred/4.jpg","/projects/institutional/sacred/5.jpg"]
+    "image": "/projects/institutional/sacred/1.webp",
+    "images": ["/projects/institutional/sacred/1.webp","/projects/institutional/sacred/2.webp","/projects/institutional/sacred/3.webp","/projects/institutional/sacred/4.webp","/projects/institutional/sacred/5.webp"]
   },
   {
     "id": 5,
@@ -46,8 +46,8 @@
     "category": "Institutional",
     "categorySlug": "institutional",
     "description": "A five-storied co-educational English medium school with 28 classrooms, modern laboratories, library, dance room, and auditorium. Features gharsa slate cladding and brick pillars complementing the natural terrain.",
-    "image": "/projects/institutional/saraswati/1.jpg",
-    "images": ["/projects/institutional/saraswati/1.jpg","/projects/institutional/saraswati/2.jpg","/projects/institutional/saraswati/3.jpg","/projects/institutional/saraswati/4.jpg","/projects/institutional/saraswati/5.jpg"]
+    "image": "/projects/institutional/saraswati/1.webp",
+    "images": ["/projects/institutional/saraswati/1.webp","/projects/institutional/saraswati/2.webp","/projects/institutional/saraswati/3.webp","/projects/institutional/saraswati/4.webp","/projects/institutional/saraswati/5.webp"]
   },
   {
     "id": 6,
@@ -56,8 +56,8 @@
     "category": "Institutional",
     "categorySlug": "institutional",
     "description": "Building designed in colonial style with 24 classrooms, play field and auditorium in the heart of Shimla. Features machine-made brick facades with arches, circular windows, and wooden finishes.",
-    "image": "/projects/institutional/belvedere/1.jpg",
-    "images": ["/projects/institutional/belvedere/1.jpg","/projects/institutional/belvedere/2.jpg","/projects/institutional/belvedere/3.jpg","/projects/institutional/belvedere/4.jpg","/projects/institutional/belvedere/5.jpg"]
+    "image": "/projects/institutional/belvedere/1.webp",
+    "images": ["/projects/institutional/belvedere/1.webp","/projects/institutional/belvedere/2.webp","/projects/institutional/belvedere/3.webp","/projects/institutional/belvedere/4.webp","/projects/institutional/belvedere/5.webp"]
   },
   {
     "id": 7,
@@ -66,8 +66,8 @@
     "category": "Residential",
     "categorySlug": "residential",
     "description": "A 320 sq.m residential project in Mashobra hills, functioning as a bed and breakfast. Features a blend of sustainable materials including wood, stone, concrete, and cane with warm tones throughout.",
-    "image": "/projects/residential/saanjh/1.jpg",
-    "images": ["/projects/residential/saanjh/1.jpg","/projects/residential/saanjh/2.jpg","/projects/residential/saanjh/3.jpg","/projects/residential/saanjh/4.jpg","/projects/residential/saanjh/5.jpg"]
+    "image": "/projects/residential/saanjh/1.webp",
+    "images": ["/projects/residential/saanjh/1.webp","/projects/residential/saanjh/2.webp","/projects/residential/saanjh/3.webp","/projects/residential/saanjh/4.webp","/projects/residential/saanjh/5.webp"]
   },
   {
     "id": 8,
@@ -76,8 +76,8 @@
     "category": "Residential",
     "categorySlug": "residential",
     "description": "A 3,000 sq.m colonial-style residence featuring 3 bedrooms, drawing and dining room, kitchen, gym in attic floor. Incorporates local mandi stone exteriors, gothic-style windows, spa, and expansive lawn.",
-    "image": "/projects/residential/man-pasand/1.jpg",
-    "images": ["/projects/residential/man-pasand/1.jpg","/projects/residential/man-pasand/2.jpg","/projects/residential/man-pasand/3.jpg","/projects/residential/man-pasand/4.jpg","/projects/residential/man-pasand/5.jpg"]
+    "image": "/projects/residential/man-pasand/1.webp",
+    "images": ["/projects/residential/man-pasand/1.webp","/projects/residential/man-pasand/2.webp","/projects/residential/man-pasand/3.webp","/projects/residential/man-pasand/4.webp","/projects/residential/man-pasand/5.webp"]
   },
   {
     "id": 9,
@@ -86,8 +86,8 @@
     "category": "Residential",
     "categorySlug": "residential",
     "description": "A residential villa on a raised plateau offering 360-degree views with forest surroundings. Features an octagonal drawing room capturing panoramic vistas and a lift connecting road-level parking.",
-    "image": "/projects/residential/manish/1.jpg",
-    "images": ["/projects/residential/manish/1.jpg","/projects/residential/manish/2.jpg","/projects/residential/manish/3.jpg","/projects/residential/manish/4.jpg","/projects/residential/manish/5.jpg"]
+    "image": "/projects/residential/manish/1.webp",
+    "images": ["/projects/residential/manish/1.webp","/projects/residential/manish/2.webp","/projects/residential/manish/3.webp","/projects/residential/manish/4.webp","/projects/residential/manish/5.webp"]
   },
   {
     "id": 10,
@@ -96,8 +96,8 @@
     "category": "Group Housing",
     "categorySlug": "group-housing",
     "description": "Award-winning residential complex featuring 6 villas and 18 apartments with sustainable design principles. Incorporates vernacular architecture using reclaimed railway sleepers and green building materials.",
-    "image": "/projects/group-housing/parkwood/1.jpg",
-    "images": ["/projects/group-housing/parkwood/1.jpg","/projects/group-housing/parkwood/2.jpg","/projects/group-housing/parkwood/3.jpg","/projects/group-housing/parkwood/4.jpg","/projects/group-housing/parkwood/5.jpg"]
+    "image": "/projects/group-housing/parkwood/1.webp",
+    "images": ["/projects/group-housing/parkwood/1.webp","/projects/group-housing/parkwood/2.webp","/projects/group-housing/parkwood/3.webp","/projects/group-housing/parkwood/4.webp","/projects/group-housing/parkwood/5.webp"]
   },
   {
     "id": 11,
@@ -106,8 +106,8 @@
     "category": "Group Housing",
     "categorySlug": "group-housing",
     "description": "A residential complex containing 6 2BHK apartments in Purani Koti, Mashobra. Features south-facing orientation for solar efficiency, solar heating systems, and gharsa stone cladding.",
-    "image": "/projects/group-housing/ranjan/1.jpg",
-    "images": ["/projects/group-housing/ranjan/1.jpg","/projects/group-housing/ranjan/2.jpg","/projects/group-housing/ranjan/3.jpg","/projects/group-housing/ranjan/4.jpg","/projects/group-housing/ranjan/5.jpg"]
+    "image": "/projects/group-housing/ranjan/1.webp",
+    "images": ["/projects/group-housing/ranjan/1.webp","/projects/group-housing/ranjan/2.webp","/projects/group-housing/ranjan/3.webp","/projects/group-housing/ranjan/4.webp","/projects/group-housing/ranjan/5.webp"]
   },
   {
     "id": 12,
@@ -116,8 +116,8 @@
     "category": "Commercial",
     "categorySlug": "commercial",
     "description": "A five-storied building at Bhattakuffar featuring commercial spaces, parking, guest rooms, and a banquet hall. Its distinctive curvilinear exterior with circular corners utilizes large toughened glass and ACP sheet finishes.",
-    "image": "/projects/commercial/prakash/1.jpg",
-    "images": ["/projects/commercial/prakash/1.jpg","/projects/commercial/prakash/2.jpg","/projects/commercial/prakash/3.jpg","/projects/commercial/prakash/4.jpg","/projects/commercial/prakash/5.jpg"]
+    "image": "/projects/commercial/prakash/1.webp",
+    "images": ["/projects/commercial/prakash/1.webp","/projects/commercial/prakash/2.webp","/projects/commercial/prakash/3.webp","/projects/commercial/prakash/4.webp","/projects/commercial/prakash/5.webp"]
   },
   {
     "id": 13,
@@ -126,8 +126,8 @@
     "category": "Commercial",
     "categorySlug": "commercial",
     "description": "A 3,700 sq.m corporate office featuring traditional katha-kuni style of architecture with stepped masses, two landscaped courtyards, and design elements complementing the natural surroundings.",
-    "image": "/projects/commercial/sjvnl/1.jpg",
-    "images": ["/projects/commercial/sjvnl/1.jpg","/projects/commercial/sjvnl/2.jpg","/projects/commercial/sjvnl/3.jpg","/projects/commercial/sjvnl/4.jpg","/projects/commercial/sjvnl/5.jpg"]
+    "image": "/projects/commercial/sjvnl/1.webp",
+    "images": ["/projects/commercial/sjvnl/1.webp","/projects/commercial/sjvnl/2.webp","/projects/commercial/sjvnl/3.webp","/projects/commercial/sjvnl/4.webp","/projects/commercial/sjvnl/5.webp"]
   },
   {
     "id": 14,
@@ -136,8 +136,8 @@
     "category": "Commercial",
     "categorySlug": "commercial",
     "description": "A five-story structure serving as the HP State Congress Committee party office. Features party offices, meeting rooms, and a conference hall designed with RCC slabs over steel trusses.",
-    "image": "/projects/commercial/rajiv/1.jpg",
-    "images": ["/projects/commercial/rajiv/1.jpg","/projects/commercial/rajiv/2.jpg","/projects/commercial/rajiv/3.jpg","/projects/commercial/rajiv/4.jpg","/projects/commercial/rajiv/5.jpg"]
+    "image": "/projects/commercial/rajiv/1.webp",
+    "images": ["/projects/commercial/rajiv/1.webp","/projects/commercial/rajiv/2.webp","/projects/commercial/rajiv/3.webp","/projects/commercial/rajiv/4.webp","/projects/commercial/rajiv/5.webp"]
   },
   {
     "id": 15,
@@ -146,8 +146,8 @@
     "category": "Religious",
     "categorySlug": "religious",
     "description": "Reconstruction of a temple complex in Theog tehsil using Katha Kuni style, a traditional wood-stone framework technique providing seismic resilience while preserving vernacular building practices.",
-    "image": "/projects/religious/guthan/1.jpg",
-    "images": ["/projects/religious/guthan/1.jpg","/projects/religious/guthan/2.jpg","/projects/religious/guthan/3.jpg","/projects/religious/guthan/4.jpg","/projects/religious/guthan/5.jpg"]
+    "image": "/projects/religious/guthan/1.webp",
+    "images": ["/projects/religious/guthan/1.webp","/projects/religious/guthan/2.webp","/projects/religious/guthan/3.webp","/projects/religious/guthan/4.webp","/projects/religious/guthan/5.webp"]
   },
   {
     "id": 16,
@@ -156,7 +156,7 @@
     "category": "Religious",
     "categorySlug": "religious",
     "description": "A temporary architectural installation completed in 45 days. Includes a traditional Himachal-style entry gate, a replica of Bhimakali Temple Sarahan in Katha kuni style, and traditional Himachal houses.",
-    "image": "/projects/religious/himachal/1.jpg",
-    "images": ["/projects/religious/himachal/1.jpg","/projects/religious/himachal/2.jpg","/projects/religious/himachal/3.jpg","/projects/religious/himachal/4.jpg","/projects/religious/himachal/5.jpg"]
+    "image": "/projects/religious/himachal/1.webp",
+    "images": ["/projects/religious/himachal/1.webp","/projects/religious/himachal/2.webp","/projects/religious/himachal/3.webp","/projects/religious/himachal/4.webp","/projects/religious/himachal/5.webp"]
   }
 ]

@@ -68,24 +68,27 @@ export default function HeroSection() {
     <section ref={containerRef} className="relative" style={{ height: "250svh" }}>
       <div ref={stickyRef} className="sticky top-0 w-full overflow-hidden" style={{ height: "100svh" }}>
         <motion.img
-          src="/bg.png"
+          src="/bg.webp"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover brightness-[0.9]"
+          draggable={false}
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.9] select-none pointer-events-none"
           style={{ zIndex: 0, scale: bgScale, y: bgY }}
         />
 
         <motion.img
-          src="/hill.png"
+          src="/hill.webp"
           alt="Mountain landscape"
-          className="absolute bottom-0 left-0 w-full brightness-80 object-cover object-top"
+          draggable={false}
+          className="absolute bottom-0 left-0 w-full brightness-80 object-cover object-top select-none pointer-events-none"
           style={{ zIndex: 10, y: hillY, height: "50svh" }}
         />
 
         <motion.img
-          src="/temple.png"
+          src="/temple.webp"
           alt="Himalayan temple"
-          className="absolute bottom-0 right-[35%] object-contain"
+          draggable={false}
+          className="absolute bottom-0 right-[35%] object-contain select-none pointer-events-none"
           style={{ zIndex: 20, y: templeY, scale: templeScale, height: "70svh" }}
         />
 
@@ -94,19 +97,19 @@ export default function HeroSection() {
           style={{ zIndex: 30, y: textY }}
         >
           <h1 className="font-sans text-5xl font-black tracking-tight text-neutral-200 text-center md:text-5xl lg:text-6xl">
-            Sushil Sharma <span className="font-logo italic font-bold tracking-wide"><br />Associates</span>
+            Sthaptya <span className="font-logo italic font-bold tracking-wide"><br /></span>
           </h1>
           <p className="font-display mt-3 text-xl italic text-neutral-100 text-center md:text-xl">
-            Architects from the Himalayas
+            Expert in Himalayan architecture
           </p>
-          <div className="mt-6 flex gap-4">
-            <a href="/projects" className="group relative h-9 overflow-hidden px-4 rounded-md border border-white bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200">
-              <span className="flex h-9 items-center transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
-              <span className="flex h-9 items-center transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
+          <div className="mt-8 flex gap-5">
+            <a href="/projects" className="group relative h-12 overflow-hidden px-7 rounded-lg border border-white bg-white text-black text-base font-medium hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200">
+              <span className="flex h-12 items-center font-instrument italic transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
+              <span className="flex h-12 items-center font-instrument italic transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
             </a>
-            <a href="/book" className="group relative h-9 overflow-hidden px-4 rounded-md border border-maroon bg-maroon text-white text-sm hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200">
-              <span className="flex h-9 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
-              <span className="flex h-9 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
+            <a href="/book" className="group relative h-12 overflow-hidden px-7 rounded-lg border border-maroon bg-maroon text-white text-base font-medium hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200">
+              <span className="flex h-12 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={18} /></span>
+              <span className="flex h-12 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={18} /></span>
             </a>
           </div>
         </motion.div>
@@ -119,10 +122,11 @@ export default function HeroSection() {
         </div>
 
         <motion.img
-          src="/hole.png"
+          src="/hole.webp"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+          draggable={false}
+          className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
           style={{ zIndex: 40, transformOrigin: "center center", scale: holeScale }}
         />
       </div>

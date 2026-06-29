@@ -89,7 +89,7 @@ export default function ProjectCarousel({
   };
 
   return (
-    <div className="relative w-full">
+  <div className="relative w-full">
       <ul
         ref={scrollRef}
         role="group"
@@ -157,7 +157,7 @@ export default function ProjectCarousel({
       <nav className="flex justify-center gap-3 mt-6">
         <button
           onClick={() => scrollBy(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 bg-black/5 backdrop-blur-sm text-black hover:bg-black/10 transition-colors"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 bg-black/5 backdrop-blur-sm text-black cursor-pointer hover:bg-black/10 transition-colors"
           aria-label="Previous"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -166,7 +166,7 @@ export default function ProjectCarousel({
         </button>
         <button
           onClick={() => scrollBy(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 bg-black/5 backdrop-blur-sm text-black hover:bg-black/10 transition-colors"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 bg-black/5 backdrop-blur-sm text-black cursor-pointer hover:bg-black/10 transition-colors"
           aria-label="Next"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

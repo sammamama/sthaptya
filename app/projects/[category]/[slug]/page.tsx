@@ -42,25 +42,34 @@ export default async function ProjectPage({
 
   return (
     <>
-      <Navbar />
-      <main className="bg-black min-h-screen pt-20 pb-16">
+      <Navbar variant="light" />
+      <main className="bg-neutral-100 min-h-screen pt-20 pb-16">
         {/* Back link + Title */}
         <div className="px-6 lg:px-16 mb-6">
-          <a
-            href="/projects"
-            className="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white transition-colors mb-4"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-            Back to Projects
-          </a>
-          <h1 className="font-sans text-3xl font-bold text-pure-white md:text-4xl lg:text-5xl">
+          <div className="flex items-center gap-4">
+            <a
+              href="/projects"
+              className="sticky top-20 z-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/20 bg-white/70 backdrop-blur-sm text-black hover:bg-black/10 transition-colors"
+              aria-label="Back to Projects"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </a>
+            <h1 className="font-sans text-3xl font-bold text-black md:text-4xl lg:text-5xl">
             {project.title}
           </h1>
-          <span className="inline-block mt-3 liquid-glass rounded-full px-4 py-1.5 text-sm font-medium text-white/80">
+          </div>
+          <span className="inline-block mt-3 ml-14 rounded-full border border-black/20 bg-black/5 px-4 py-1.5 text-sm font-medium text-black/80">
             {project.category}
           </span>
+        </div>
+
+        {/* Description */}
+        <div className="px-6 lg:px-16 max-w-3xl mb-10">
+          <p className="font-display text-base text-black/70 leading-relaxed">
+            {project.description}
+          </p>
         </div>
 
         {/* Airbnb-style image grid */}
@@ -89,15 +98,6 @@ export default async function ProjectPage({
           </div>
         </div>
 
-        {/* Description */}
-        <div className="px-6 lg:px-16 max-w-3xl">
-          <h2 className="font-sans text-xl font-semibold text-pure-white mb-4">
-            About this project
-          </h2>
-          <p className="font-display text-base text-white/70 leading-relaxed">
-            {project.description}
-          </p>
-        </div>
       </main>
     </>
   );

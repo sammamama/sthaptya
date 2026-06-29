@@ -26,8 +26,9 @@ const NAV_LINKS = [
   { label: "Blogs", href: "/blogs" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const [open, setOpen] = useState(false);
+  const isLight = variant === "light";
 
   return (
     <nav
@@ -35,17 +36,17 @@ export default function Navbar() {
     >
       {/* Left — Logo */}
       <div className="liquid-glass flex h-12 w-12 items-center justify-center overflow-hidden rounded-full">
-        <img src="/logo.jpg" alt="Sthaptya Architects logo" className="h-full w-full object-cover" />
+        <img src="/logo.webp" alt="Sthaptya Architects logo" className="h-full w-full object-cover" />
       </div>
 
       {/* Center — Nav pill (desktop only) */}
-      <div className="hidden border md:block  bg-black/50 t backdrop-blur-3xl rounded-full px-1.5 py-1.5">
+      <div className={`hidden border md:block backdrop-blur-3xl rounded-full px-1.5 py-1.5 ${isLight ? "bg-white/70 border-black/10" : "bg-black/50"}`}>
         <div className="flex items-center">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-body px-3 py-2 text-sm font-medium text-white hover:text-red-800 transition-colors"
+              className={`font-body px-3 py-2 text-sm font-medium transition-colors ${isLight ? "text-black hover:text-red-800" : "text-white hover:text-red-800"}`}
             >
               {link.label}
             </a>
@@ -69,9 +70,9 @@ export default function Navbar() {
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className=" flex h-12 w-12 items-center justify-center liquid-glass rounded-full backdrop-blur-2xl md:hidden"
+        className={`flex h-12 w-12 items-center justify-center rounded-full backdrop-blur-2xl md:hidden ${isLight ? "bg-black/10 border border-black/20" : "liquid-glass"}`}
       >
-        <svg className="text-red-800" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg className={isLight ? "text-black" : "text-neutral-100"} width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           {open ? (
             <>
               <path d="M18 6L6 18" />
@@ -89,13 +90,13 @@ export default function Navbar() {
 
       {/* Mobile dropdown menu */}
       {open && (
-        <div className="absolute top-16 right-8 left-8 flex flex-col gap-1 rounded-2xl border bg-black/70 backdrop-blur-3xl p-3 md:hidden">
+        <div className={`absolute top-16 right-8 left-8 flex flex-col gap-1 rounded-2xl border backdrop-blur-3xl p-3 md:hidden ${isLight ? "bg-white/80 border-black/10" : "bg-black/70"}`}>
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-body rounded-xl px-4 py-3 text-base font-medium text-white hover:bg-white/10 transition-colors"
+              className={`font-body rounded-xl px-4 py-3 text-base font-medium transition-colors ${isLight ? "text-black hover:bg-black/5" : "text-white hover:bg-white/10"}`}
             >
               {link.label}
             </a>
