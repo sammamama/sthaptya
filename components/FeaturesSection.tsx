@@ -89,7 +89,7 @@ export default function FeaturesSection() {
     <section className="relative w-full py-20 px-3 sm:px-5 lg:px-8 overflow-x-clip">
       <div className="relative z-10 mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-12">
         <div>
-          <div className="rounded-2xl border border-black/10 bg-black/5 backdrop-blur-sm p-6 md:p-4">
+          <div className="liquid-glass rounded-3xl border border-white/15 p-6 md:p-4">
             <h2 className="font-sans text-3xl font-bold text-neutral-100 mb-4">
               What you get
             </h2>
@@ -135,7 +135,7 @@ export default function FeaturesSection() {
         </div>
 
         <div className="flex flex-col gap-6" ref={helpedRef}>
-          <div className="relative overflow-hidden rounded-2xl border border-black/10 backdrop-blur-sm p-4 flex flex-col gap-4">
+          <div className="relative overflow-hidden liquid-glass rounded-3xl border border-white/15 p-4 flex flex-col gap-4">
             <div className="absolute inset-0 bg-red-900/55" />
             <div
               className="pointer-events-none absolute inset-0 opacity-[0.2]"

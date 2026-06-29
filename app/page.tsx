@@ -1,4 +1,5 @@
 import FeaturesSection from "@/components/FeaturesSection";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import ProjectCarousel from "@/components/ProjectCarousel";
@@ -16,7 +17,7 @@ export default function Home() {
         <section className="rounded-t-4xl relative py-24 px-3 sm:px-5 lg:px-8">
           <div className="liquid-glass rounded-3xl border border-white/15 p-3 sm:p-5 md:p-6 mx-auto max-w-7xl">
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="font-sans text-4xl font-bold text-white md:text-5xl">
+              <h2 className="font-sans text-3xl font-bold text-white md:text-4xl">
                 Our Projects
               </h2>
               <a
@@ -29,6 +30,7 @@ export default function Home() {
             <ProjectCarousel projects={projects} />
           </div>
         </section>
+        <Footer />
       </div>
     </div>
   );

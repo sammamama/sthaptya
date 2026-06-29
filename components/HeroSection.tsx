@@ -97,19 +97,19 @@ export default function HeroSection() {
           style={{ zIndex: 30, y: textY }}
         >
           <h1 className="font-sans text-5xl font-black tracking-tight text-neutral-200 text-center md:text-5xl lg:text-6xl">
-            Sthaptya <span className="font-logo italic font-bold tracking-wide"><br /></span>
+            Sushil Sharma <br /><span className="font-instrument font-light tracking-wide italic">Associates</span> <span className="font-logo italic font-bold tracking-wide"><br /></span>
           </h1>
           <p className="font-display mt-3 text-xl italic text-neutral-100 text-center md:text-xl">
             Expert in Himalayan architecture
           </p>
           <div className="mt-8 flex gap-5">
-            <a href="/projects" className="group relative h-12 overflow-hidden px-7 rounded-lg border border-white bg-white text-black text-base font-medium hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200">
-              <span className="flex h-12 items-center font-instrument italic transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
-              <span className="flex h-12 items-center font-instrument italic transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
+            <a href="/projects" className="group relative h-10 overflow-hidden px-5 rounded-md border border-white bg-white text-black text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200">
+              <span className="flex h-10 items-center font-instrument italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
+              <span className="flex h-10 items-center font-instrument italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
             </a>
-            <a href="/book" className="group relative h-12 overflow-hidden px-7 rounded-lg border border-maroon bg-maroon text-white text-base font-medium hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200">
-              <span className="flex h-12 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={18} /></span>
-              <span className="flex h-12 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={18} /></span>
+            <a href="/book" className="group relative h-10 overflow-hidden px-5 rounded-md border border-maroon bg-maroon text-white text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200">
+              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
+              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
             </a>
           </div>
         </motion.div>
