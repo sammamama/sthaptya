@@ -24,6 +24,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "Blogs", href: "/blogs" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
@@ -36,7 +37,7 @@ export default function Navbar({ variant = "dark" }: { variant?: "dark" | "light
     >
       {/* Left — Logo */}
       <div className="liquid-glass flex h-12 w-12 items-center justify-center overflow-hidden rounded-full">
-        <img src="/logo.webp" alt="Sthaptya Architects logo" className="h-full w-full object-cover" />
+        <img src="/logo.webp" alt="Sushil Sharma Associates logo" className="h-full w-full object-cover" />
       </div>
 
       {/* Center — Nav pill (desktop only) */}

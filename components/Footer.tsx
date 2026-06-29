@@ -9,12 +9,12 @@ export default function Footer() {
               <div className="h-12 w-12 overflow-hidden rounded-full">
                 <img
                   src="/logo.webp"
-                  alt="Sthaptya Architects logo"
+                  alt="Sushil Sharma Associates logo"
                   className="h-full w-full object-cover"
                 />
               </div>
               <span className="font-sans text-xl font-bold text-white">
-                Sthaptya
+                Sushil Sharma Associates
               </span>
             </div>
             <p className="font-body text-sm text-white/60 leading-relaxed max-w-xs">
@@ -33,6 +33,7 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "Projects", href: "/projects" },
                 { label: "Blogs", href: "/blogs" },
+                { label: "Contact Us", href: "/contact" },
                 { label: "Book a Meeting", href: "/book" },
               ].map((link) => (
                 <a
@@ -52,9 +53,14 @@ export default function Footer() {
               Contact Us
             </h3>
             <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-3">
+              <a
+                href="https://www.google.com/maps/place/Sushil+Sharma+associates/@31.0915974,77.1453518,13z/data=!4m10!1m2!2m1!1sSunbreeze+Building+Sanjauli+Chowk+Near+Gurudwara+Sanjauli+Shimla+Himachal+Pradesh+171006+India!3m6!1s0x390579c325e56c09:0x85adba729dd0378c!8m2!3d31.1031715!4d77.192363!15sCl5TdW5icmVlemUgQnVpbGRpbmcgU2FuamF1bGkgQ2hvd2sgTmVhciBHdXJ1ZHdhcmEgU2FuamF1bGkgU2hpbWxhIEhpbWFjaGFsIFByYWRlc2ggMTcxMDA2IEluZGlhWmAiXnN1bmJyZWV6ZSBidWlsZGluZyBzYW5qYXVsaSBjaG93ayBuZWFyIGd1cnVkd2FyYSBzYW5qYXVsaSBzaGltbGEgaGltYWNoYWwgcHJhZGVzaCAxNzEwMDYgaW5kaWGSARZhcmNoaXRlY3RzX2Fzc29jaWF0aW9umgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5MT1RkUWMzaG5SUkFC4AEA-gEFCKwEEEY!16s%2Fg%2F11r10j341h?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 group w-fit"
+              >
                 <svg
-                  className="mt-0.5 shrink-0 text-white/50"
+                  className="mt-0.5 shrink-0 text-white/50 group-hover:text-white transition-colors"
                   width={16}
                   height={16}
                   viewBox="0 0 24 24"
@@ -67,14 +73,14 @@ export default function Footer() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx={12} cy={10} r={3} />
                 </svg>
-                <p className="font-body text-sm text-white/70 leading-relaxed">
-                  1st Floor, Sunbreeze Building,
+                <p className="font-body text-sm text-white/70 leading-relaxed group-hover:text-white transition-colors">
+                  Sunbreeze Building, Sanjauli Chowk,
                   <br />
-                  Opposite Gurudwara, Sanjauli
+                  Near Gurudwara, Sanjauli,
                   <br />
-                  Shimla &ndash; 06
+                  Shimla, Himachal Pradesh 171006, India
                 </p>
-              </div>
+              </a>
 
               <a
                 href="mailto:ssashimla@gmail.com"
@@ -115,8 +121,6 @@ export default function Footer() {
                   <a href="tel:01772843555" className="transition-colors hover:text-white">0177 2843555</a>
                   <br />
                   <a href="tel:7018815510" className="transition-colors hover:text-white">7018815510</a>
-                  <br />
-                  <a href="tel:9816043555" className="transition-colors hover:text-white">9816043555</a>
                 </p>
               </div>
             </div>
@@ -126,7 +130,7 @@ export default function Footer() {
         {/* Divider + Copyright */}
         <div className="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-body text-xs text-white/40">
-            &copy; {new Date().getFullYear()} Sthaptya Architects. All rights reserved.
+            &copy; {new Date().getFullYear()} Sushil Sharma Associates. All rights reserved.
           </p>
           <p className="font-body text-xs text-white/40">
             Shimla, Himachal Pradesh

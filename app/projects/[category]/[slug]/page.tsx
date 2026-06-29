@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import ProjectGallery from "@/components/ProjectGallery";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import projects from "@/public/projects/projects.json";
 
 export function generateStaticParams() {
@@ -21,7 +22,7 @@ export async function generateMetadata({
   );
   if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} — Sthaptya Architects`,
+    title: project.title,
     description: project.description,
   };
 }
@@ -40,6 +41,13 @@ export default async function ProjectPage({
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Projects", href: "/projects" },
+          { name: project.title, href: `/projects/${project.categorySlug}/${project.slug}` },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-neutral-100 min-h-screen pt-20 pb-16">
         {/* Back link + Title */}

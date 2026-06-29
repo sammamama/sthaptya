@@ -65,8 +65,16 @@ export default function HeroSection() {
   const hillY = useTransform(progress, [0.025, 1], ["100%", "0%"]);
 
   return (
-    <section ref={containerRef} className="relative" style={{ height: "250svh" }}>
-      <div ref={stickyRef} className="sticky top-0 w-full overflow-hidden" style={{ height: "100svh" }}>
+    <section
+      ref={containerRef}
+      className="relative"
+      style={{ height: "250svh" }}
+    >
+      <div
+        ref={stickyRef}
+        className="sticky top-0 w-full overflow-hidden"
+        style={{ height: "100svh" }}
+      >
         <motion.img
           src="/bg.webp"
           alt=""
@@ -89,7 +97,12 @@ export default function HeroSection() {
           alt="Himalayan temple"
           draggable={false}
           className="absolute bottom-0 right-[35%] object-contain select-none pointer-events-none"
-          style={{ zIndex: 20, y: templeY, scale: templeScale, height: "70svh" }}
+          style={{
+            zIndex: 20,
+            y: templeY,
+            scale: templeScale,
+            height: "70svh",
+          }}
         />
 
         <motion.div
@@ -97,28 +110,68 @@ export default function HeroSection() {
           style={{ zIndex: 30, y: textY }}
         >
           <h1 className="font-sans text-5xl font-black tracking-tight text-neutral-200 text-center md:text-5xl lg:text-6xl">
-            Sushil Sharma <br /><span className="font-serif-accent font-light tracking-wide italic">Associates</span> <span className="font-logo italic font-bold tracking-wide"><br /></span>
+            Sushil Sharma <br />
+            <span className="font-serif-accent font-light tracking-wide italic">
+              Associates
+            </span>{" "}
+            <span className="font-logo italic font-bold tracking-wide">
+              <br />
+            </span>
           </h1>
-          <p className="font-display mt-3 text-xl italic text-neutral-100 text-center md:text-xl">
-            Expert in Himalayan architecture
+          <p className="font-display mt-5 text-xl italic text-neutral-100 text-center md:text-xl">
+            Crafting landmarks on every horizon <br />
+            <span className="font-serif-accent tracking-wider relative">
+              since 1997{" "}
+              <span className="block absolute bottom-0 left-0 w-full bg-linear-to-r from-transparent via-white to-transparent h-[2px]" />
+            </span>
           </p>
           <div className="mt-8 flex gap-5">
-            <a href="/projects" className="group relative h-10 overflow-hidden px-5 rounded-md border border-white bg-white text-black text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200">
-              <span className="flex h-10 items-center font-serif-accent italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
-              <span className="flex h-10 items-center font-serif-accent italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">See Projects</span>
+            <a
+              href="/projects"
+              className="group relative h-10 overflow-hidden px-5 rounded-md border border-white bg-white text-black text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.6)] transition-shadow duration-200"
+            >
+              <span className="flex h-10 items-center font-serif-accent italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
+                See Projects
+              </span>
+              <span className="flex h-10 items-center font-serif-accent italic text-lg transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
+                See Projects
+              </span>
             </a>
-            <a href="/book" className="group relative h-10 overflow-hidden px-5 rounded-md border border-maroon bg-maroon text-white text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200">
-              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
-              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Book Meeting <ArrowUpRight size={16} /></span>
+            <a
+              href="/book"
+              className="group relative h-10 overflow-hidden px-5 rounded-md border border-maroon bg-maroon text-white text-sm font-medium hover:shadow-[4px_4px_0px_0px_rgba(128,0,32,0.6)] transition-shadow duration-200"
+            >
+              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
+                Book Meeting <ArrowUpRight size={16} />
+              </span>
+              <span className="flex h-10 items-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-full">
+                Book Meeting <ArrowUpRight size={16} />
+              </span>
             </a>
           </div>
         </motion.div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce" style={{ zIndex: 50 }}>
-          <svg width="28" height="43" viewBox="0 0 79.37 122.88" fill="none" stroke="currentColor" strokeWidth="0" className="text-white">
-            <path d="M50.2,121.63c6.71-1.85,12.72-5.44,17.51-10.23c7.19-7.19,11.65-17.11,11.65-28.03V39.68c0-10.92-4.46-20.84-11.65-28.03 C60.52,4.46,50.6,0,39.68,0C28.77,0,18.84,4.46,11.65,11.65C4.46,18.84,0,28.77,0,39.68v43.68c0,10.92,4.46,20.84,11.65,28.03 c5.59,5.59,12.82,9.53,20.89,11.01C37.42,123.3,45.7,122.87,50.2,121.63L50.2,121.63L50.2,121.63z M39.23,92.06 c4.15,0,7.55-3.4,7.55-7.55v-7.78c0-4.15-3.4-7.55-7.55-7.55c-4.15,0-7.55,3.4-7.55,7.55v7.78C31.68,88.66,35.07,92.06,39.23,92.06 L39.23,92.06z M61.08,104.77c-5.49,5.49-13.07,8.91-21.4,8.91c-8.33,0-15.9-3.41-21.4-8.91c-5.49-5.49-8.91-13.07-8.91-21.4V39.68 c0-8.33,3.41-15.9,8.91-21.4c5.49-5.49,13.07-8.91,21.4-8.91c8.33,0,15.9,3.41,21.4,8.91c5.49,5.49,8.91,13.07,8.91,21.4v43.68 C69.99,91.7,66.58,99.27,61.08,104.77L61.08,104.77L61.08,104.77z" fill="currentColor"/>
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
+          style={{ zIndex: 50 }}
+        >
+          <svg
+            width="28"
+            height="43"
+            viewBox="0 0 79.37 122.88"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="0"
+            className="text-white"
+          >
+            <path
+              d="M50.2,121.63c6.71-1.85,12.72-5.44,17.51-10.23c7.19-7.19,11.65-17.11,11.65-28.03V39.68c0-10.92-4.46-20.84-11.65-28.03 C60.52,4.46,50.6,0,39.68,0C28.77,0,18.84,4.46,11.65,11.65C4.46,18.84,0,28.77,0,39.68v43.68c0,10.92,4.46,20.84,11.65,28.03 c5.59,5.59,12.82,9.53,20.89,11.01C37.42,123.3,45.7,122.87,50.2,121.63L50.2,121.63L50.2,121.63z M39.23,92.06 c4.15,0,7.55-3.4,7.55-7.55v-7.78c0-4.15-3.4-7.55-7.55-7.55c-4.15,0-7.55,3.4-7.55,7.55v7.78C31.68,88.66,35.07,92.06,39.23,92.06 L39.23,92.06z M61.08,104.77c-5.49,5.49-13.07,8.91-21.4,8.91c-8.33,0-15.9-3.41-21.4-8.91c-5.49-5.49-8.91-13.07-8.91-21.4V39.68 c0-8.33,3.41-15.9,8.91-21.4c5.49-5.49,13.07-8.91,21.4-8.91c8.33,0,15.9,3.41,21.4,8.91c5.49,5.49,8.91,13.07,8.91,21.4v43.68 C69.99,91.7,66.58,99.27,61.08,104.77L61.08,104.77L61.08,104.77z"
+              fill="currentColor"
+            />
           </svg>
-          <span className="font-body text-xs uppercase tracking-widest text-white/70">Scroll down</span>
+          <span className="font-body text-xs uppercase tracking-widest text-white/70">
+            Scroll down
+          </span>
         </div>
 
         <motion.img
@@ -127,7 +180,11 @@ export default function HeroSection() {
           aria-hidden="true"
           draggable={false}
           className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
-          style={{ zIndex: 40, transformOrigin: "center center", scale: holeScale }}
+          style={{
+            zIndex: 40,
+            transformOrigin: "center center",
+            scale: holeScale,
+          }}
         />
       </div>
     </section>

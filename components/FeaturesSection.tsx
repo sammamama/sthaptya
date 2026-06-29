@@ -13,9 +13,9 @@ const CONSTRUCTION_VIDEO = "https://d8j0ntlcm91z4.cloudfront.net/user_2wz19UwQVw
 const PLANNING_VIDEO = "https://d8j0ntlcm91z4.cloudfront.net/user_2wz19UwQVw85l2M9dxCWfoUPw1S/hf_20260601_084226_64063034-111a-404a-94a3-b7838634bb4f.mp4";
 
 const STATS = [
-  { label: "Planned Houses", value: 1000, suffix: "+" },
-  { label: "Designed Houses", value: 100, suffix: "+" },
-  { label: "Government Projects", value: 50, suffix: "+" },
+  { label: "Residential Projects", value: 500, suffix: "+" },
+  { label: "Hospitality Projects", value: 250, suffix: "+" },
+  { label: "Institutional Projects", value: 50, suffix: "+" },
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -94,6 +94,24 @@ export default function FeaturesSection() {
               What you get
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-4">
+              <div className="relative sm:col-span-2 md:col-span-3 rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
+                  src={PLANNING_VIDEO}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-black">
+                  Architectural Design
+                </span>
+              </div>
+              <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
+                <AutoPlayVideo
+                  src={CONSTRUCTION_VIDEO}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
+                  Project Management Consultancy
+                </span>
+              </div>
               <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
                 <AutoPlayVideo
                   src={INTERIOR_VIDEO}
@@ -110,24 +128,6 @@ export default function FeaturesSection() {
                 />
                 <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
                   3D Modelling
-                </span>
-              </div>
-              <div className="relative rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
-                <AutoPlayVideo
-                  src={CONSTRUCTION_VIDEO}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-                <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-white">
-                  Construction
-                </span>
-              </div>
-              <div className="relative sm:col-span-2 md:col-span-3 rounded-xl border border-black/10 bg-black/5 h-64 md:h-56 overflow-hidden">
-                <AutoPlayVideo
-                  src={PLANNING_VIDEO}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-                <span className="absolute bottom-3 left-3 font-sans text-sm font-semibold text-black">
-                  Architectural Planning
                 </span>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function FeaturesSection() {
                 }}
               />
               <h3 className="relative font-sans text-2xl font-bold text-white mb-2">
-                Work with us
+                Want to build you project the right way?
               </h3>
               <p className="relative font-display text-white/70 text-sm mb-4">
                 Let&apos;s bring your vision to life.

@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import blogs from "@/public/blogs/blogs.json";
 
 export const metadata: Metadata = {
-  title: "Blogs — Sushil Sharma Associates",
-  description: "Insights on Himalayan architecture, construction techniques, and modern design.",
+  title: "Blogs",
+  description: "Insights on Himalayan architecture, construction techniques, and modern design from Sushil Sharma Associates.",
 };
 
 export default function BlogsPage() {

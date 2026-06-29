@@ -4,8 +4,8 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import projects from "@/public/projects/projects.json";
 
 export const metadata: Metadata = {
-  title: "Projects — Sthaptya Architects",
-  description: "Explore our portfolio of architectural projects across hospitality, institutional, residential, commercial, and religious sectors.",
+  title: "Projects",
+  description: "Explore the portfolio of Sushil Sharma Associates — architectural projects across hospitality, institutional, residential, commercial, and religious sectors in Himachal Pradesh.",
 };
 
 const SECTOR_ORDER = [

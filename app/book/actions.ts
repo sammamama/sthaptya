@@ -67,8 +67,8 @@ export async function submitBooking(
 
   try {
     await resend.emails.send({
-      from: "Sthaptya Booking <onboarding@resend.dev>",
-      to: "sthaptya@yahoo.com",
+      from: "SSA Booking <onboarding@resend.dev>",
+      to: ["sthaptya@yahoo.com", "ssashimla@gmail.com"],
       subject: `New Booking Request from ${firstName} ${lastName}`,
       replyTo: email,
       text: [

@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata: Metadata = {
-  title: "Book a Meeting — Sthaptya Architects",
-  description: "Schedule a meeting with Sthaptya Architects to discuss your project.",
+  title: "Book a Meeting",
+  description: "Schedule a meeting with Sushil Sharma Associates to discuss your architectural project in Shimla and Himachal Pradesh.",
 };
 
 export default function BookPage() {

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import blogs from "@/public/blogs/blogs.json";
 
 export function generateStaticParams() {
@@ -15,7 +16,7 @@ export async function generateMetadata({
   const blog = blogs.find((b) => b.slug === slug);
   if (!blog) return { title: "Blog Not Found" };
   return {
-    title: `${blog.title} — Sushil Sharma Associates`,
+    title: blog.title,
     description: blog.excerpt,
   };
 }
@@ -32,9 +33,16 @@ export default async function BlogPage({
 
   return (
     <div className="relative min-h-screen bg-neutral-100">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Blogs", href: "/blogs" },
+          { name: blog.title, href: `/blogs/${blog.slug}` },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 lg:px-16">
-        <div className="max-w-3xl mx-auto">
+        <article className="max-w-3xl mx-auto">
           <a
             href="/blogs"
             className="sticky top-20 z-50 inline-flex items-center gap-1 text-sm text-black/60 hover:text-black transition-colors mb-6 bg-white/70 backdrop-blur-sm rounded-full px-3 py-1.5 border border-black/10 w-fit"
@@ -64,7 +72,7 @@ export default async function BlogPage({
               </p>
             ))}
           </div>
-        </div>
+        </article>
       </main>
     </div>
   );
